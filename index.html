@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finally Sleep Through The Night — Without Melatonin Hangovers</title>
+  <meta name="description" content="Discover the nano-enhanced sleep formula that stops 3 AM wake-ups, calms racing thoughts, and leaves you waking up genuinely refreshed." />
+
+  <!-- Preconnect for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0d1b2a;
+      --deep:   #1a2f45;
+      --accent: #4f9cf9;
+      --gold:   #f5c842;
+      --green:  #2ecc71;
+      --text:   #e8edf2;
+      --muted:  #8fa8bf;
+      --card:   #162032;
+      --border: #1e3349;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* ── Utility ── */
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+    .accent { color: var(--accent); }
+    .gold { color: var(--gold); }
+    .green { color: var(--green); }
+
+    /* ── Top Bar ── */
+    .topbar {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      background: rgba(79,156,249,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(79,156,249,0.3);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 900;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+      text-decoration: underline;
+      text-decoration-color: rgba(245,200,66,0.4);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+
+    .hero .sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* ── Problem Block ── */
+    .problem {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 36px;
+    }
+
+    .problem h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .problem ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .problem ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 16px;
+      color: #c8d8e8;
+    }
+
+    .problem ul li::before {
+      content: "✗";
+      color: #e74c3c;
+      font-weight: 900;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Solution Intro ── */
+    .solution-intro {
+      text-align: center;
+      padding: 20px 0 30px;
+    }
+
+    .solution-intro .label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .solution-intro h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .solution-intro p {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── Proof strip ── */
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .proof-badge {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .proof-badge span { font-size: 16px; }
+
+    /* ── Testimonial Cards ── */
+    .section-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .tcard {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 22px;
+    }
+
+    .tcard .stars {
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .tcard .quote {
+      font-size: 15px;
+      color: #c8d8e8;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .tcard .author {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .tcard .verified {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* ── Feature Pills ── */
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .feature .icon {
+      font-size: 26px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── Highlight Box ── */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(79,156,249,0.12), rgba(46,204,113,0.08));
+      border: 1px solid rgba(79,156,249,0.3);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .highlight-box .big-stat {
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .highlight-box .stat-label {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f5c842, #f0a500);
+      color: #0d1b2a;
+      font-size: 18px;
+      font-weight: 900;
+      text-decoration: none;
+      padding: 20px 40px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 30px rgba(245,200,66,0.35);
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(245,200,66,0.5);
+    }
+
+    .btn-cta:active { transform: translateY(0); }
+
+    .btn-sub {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(13,27,42,0.7);
+      margin-top: 4px;
+      letter-spacing: 0.2px;
+    }
+
+    .cta-meta {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .cta-meta span {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .cta-meta .dot { color: var(--green); font-size: 18px; line-height: 1; }
+
+    /* ── Urgency bar ── */
+    .urgency {
+      background: linear-gradient(135deg, #1a2f45, #162032);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ── Guarantee ── */
+    .guarantee {
+      background: var(--card);
+      border: 1px solid rgba(46,204,113,0.3);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .guarantee .shield {
+      font-size: 52px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .guarantee h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .guarantee p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Final Push ── */
+    .final-push {
+      text-align: center;
+      padding: 20px 0 60px;
+    }
+
+    .final-push h2 {
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .final-push p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      border-top: 1px solid var(--border);
+      padding: 24px 20px;
+      font-size: 11px;
+      color: rgba(143,168,191,0.6);
+      text-align: center;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .disclaimer a { color: var(--muted); }
+
+    /* ── Sticky Bottom CTA (mobile) ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      text-align: center;
+      z-index: 999;
+      box-shadow: 0 -8px 30px rgba(0,0,0,0.5);
+    }
+
+    .sticky-cta a {
+      display: block;
+      background: linear-gradient(135deg, #f5c842, #f0a500);
+      color: #0d1b2a;
+      font-weight: 900;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 100px;
+      box-shadow: 0 4px 20px rgba(245,200,66,0.3);
+    }
+
+    @media (min-width: 640px) {
+      .sticky-cta { display: none; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .guarantee { flex-direction: column; }
+      .highlight-box .big-stat { font-size: 40px; }
+    }
+
+    /* ── Pulse animation on CTA ── */
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(245,200,66,0.5); }
+      70%  { box-shadow: 0 0 0 14px rgba(245,200,66,0); }
+      100% { box-shadow: 0 0 0 0 rgba(245,200,66,0); }
+    }
+
+    .btn-cta.pulse { animation: pulse-ring 2s ease-out infinite; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    ⚡ Limited Stock Alert — Save Up To 50% Off Today Only
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Nano-Enhanced Sleep Formula</div>
+      <h1>
+        Why Are You Still<br>
+        Waking Up at <em>3 AM?</em>
+      </h1>
+      <p class="sub">
+        The reason isn't stress, age, or bad luck — your brain's sleep pressure system is broken.
+        And there's now a clinically-backed, plant-based fix that works from the very first night.
+      </p>
+
+      <!-- Proof Badges -->
+      <div class="proof-strip">
+        <div class="proof-badge"><span>⭐</span> 5-Star Rated</div>
+        <div class="proof-badge"><span>🔬</span> 20 Clinical References</div>
+        <div class="proof-badge"><span>🛡️</span> 60-Day Guarantee</div>
+        <div class="proof-badge"><span>🌿</span> All-Natural Ingredients</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM BLOCK -->
+  <div class="container">
+    <div class="problem">
+      <h2>Sound familiar?</h2>
+      <ul>
+        <li>You lie awake for an hour before your brain finally shuts off</li>
+        <li>You wake up at 3 AM with thoughts racing — and can't get back to sleep</li>
+        <li>You've tried melatonin but wake up groggy and foggy</li>
+        <li>You're dragging through every afternoon, dependent on caffeine</li>
+        <li>You "go to bed early" but still wake up exhausted</li>
+      </ul>
+    </div>
+
+    <!-- SOLUTION INTRO -->
+    <div class="solution-intro">
+      <div class="label">The Root Cause — And The Fix</div>
+      <h2>Your Sleep Pressure System Is Broken.<br>Here's How To Reset It.</h2>
+      <p>
+        Modern life depletes adenosine — the chemical that builds natural sleep drive.
+        High-dose melatonin patches over the problem. <strong style="color:#fff;">Yu Sleep fixes the system itself</strong>,
+        using 10 plant-based compounds that work together to rebuild your body's natural sleep architecture.
+      </p>
+    </div>
+
+    <!-- DATA HIGHLIGHT -->
+    <div class="highlight-box">
+      <div class="big-stat">+60 min</div>
+      <div class="stat-label">Average increase in deep sleep after 2 weeks — tracked by Oura Ring users</div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+      <div class="feature">
+        <div class="icon">🍒</div>
+        <div>
+          <h3>Fall Asleep Faster</h3>
+          <p>Red Tart Cherry + Apigenin (nature's gentle sedative) reduce sleep onset time — so you stop staring at the ceiling.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="icon">🧠</div>
+        <div>
+          <h3>Stop 3 AM Wake-Ups</h3>
+          <p>Lemon Balm cuts cortisol spikes that jolt you awake mid-night. GABA quiets overactive brain activity so you stay under.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="icon">☀️</div>
+        <div>
+          <h3>Wake Up Actually Rested</h3>
+          <p>Magnesium Glycinate + L-Theanine extend your deep sleep phases — the stages responsible for real recovery and energy.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="icon">📈</div>
+        <div>
+          <h3>Long-Term Sleep Reset</h3>
+          <p>Only 0.9mg of melatonin (not the horse-dose 10mg that kills your receptors) tells your body it's time to rest — not crash it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="section-label">Real People. Real Results.</div>
+    <div class="section-title">What Happens When Your Sleep Finally Gets Fixed</div>
+
+    <div class="testimonials">
+
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="quote">
+          "I'm 52 and obsessed with tracking my data — so I was skeptical. But my Oura ring doesn't lie.
+          Before Yu Sleep my deep sleep averaged 37 minutes. After two weeks I'm hitting over 1 hour consistently.
+          My readiness score went from mid-50s to high 80s, and my HRV literally doubled.
+          <strong>The data doesn't lie — this works.</strong>"
+        </div>
+        <div class="author">Jenna N. — Boston, MA</div>
+        <div class="verified">✔ Verified Purchase</div>
+      </div>
+
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="quote">
+          "I'm 56 and thought waking up at 3 AM was just 'getting older.' After a few days,
+          I actually sleep through the night and feel rested like I did in my 20s.
+          My energy is back, I'm down 2 dress sizes, and my kids said <strong>'Mom, you're fun again!'</strong>"
+        </div>
+        <div class="author">Mary D. — Tampa, FL</div>
+        <div class="verified">✔ Verified Purchase</div>
+      </div>
+
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="quote">
+          "My husband and I had been sleeping in separate beds for two years because of my tossing and turning.
+          The first night I took Yu Sleep, I fell asleep in minutes. Two weeks later we're back in the same bed.
+          <strong>He said 'I got my wife back.' I cried happy tears.</strong>"
+        </div>
+        <div class="author">Lisa M. — Chicago, IL</div>
+        <div class="verified">✔ Verified Purchase</div>
+      </div>
+
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="quote">
+          "No more caffeine overload. No more afternoon crashes. I start every morning clear,
+          focused, and ready. <strong>Yu Sleep did what nothing else could.</strong>"
+        </div>
+        <div class="author">Rachel M. — Springfield, OH</div>
+        <div class="verified">✔ Verified Purchase</div>
+      </div>
+
+    </div>
+
+    <!-- URGENCY -->
+    <div class="urgency">
+      🔥 &nbsp;Current discount: Save up to 50% — but stock is limited and this page could go down any time.
+    </div>
+
+    <!-- PRIMARY CTA -->
+    <div class="cta-section">
+      <h2>Ready To Finally Sleep<br>Through The Night?</h2>
+      <p>
+        Join thousands of people who reset their sleep with Yu Sleep —
+        starting as early as tonight.
+      </p>
+      <a href="https://hop.clickbank.net/?affiliate=secur24&vendor=yusleep&op=glp&tid=tracking"
+         class="btn-cta pulse"
+         rel="nofollow sponsored"
+         target="_blank">
+        👉 See Yu Sleep's Official Page
+        <span class="btn-sub">Check pricing & availability →</span>
+      </a>
+      <div class="cta-meta">
+        <span><span class="dot">●</span> Ships within 24 hours</span>
+        <span><span class="dot">●</span> 60-Day Money-Back Guarantee</span>
+        <span><span class="dot">●</span> Free bonuses included</span>
+      </div>
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee">
+      <div class="shield">🛡️</div>
+      <div>
+        <h3>60-Day Risk-Free Guarantee</h3>
+        <p>
+          Try Yu Sleep for up to 60 days. If you don't sleep better, wake up more rested,
+          or feel a difference — you get every penny back. No questions, no hassle.
+          You have nothing to lose and a full night's sleep to gain.
+        </p>
+      </div>
+    </div>
+
+    <!-- FINAL PUSH -->
+    <div class="final-push">
+      <h2>Your Best Sleep Is One Decision Away</h2>
+      <p>Stop white-knuckling through another exhausted morning. Tonight can be different.</p>
+      <a href="https://hop.clickbank.net/?affiliate=secur24&vendor=yusleep&op=glp&tid=tracking"
+         class="btn-cta"
+         rel="nofollow sponsored"
+         target="_blank">
+        👉 Claim My Discounted Yu Sleep Package
+        <span class="btn-sub">Official page — secure checkout</span>
+      </a>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="https://hop.clickbank.net/?affiliate=secur24&vendor=yusleep&op=glp&tid=tracking"
+       rel="nofollow sponsored"
+       target="_blank">
+      👉 See Yu Sleep — Up To 50% Off Today
+    </a>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>
+      This page is an independent review &amp; affiliate promotion. The reviewer is compensated for referring sales.
+      Results shown are from verified purchasers and may not be typical. Individual results will vary.
+      These statements have not been evaluated by the Food and Drug Administration.
+      This product is not intended to diagnose, treat, cure, or prevent any disease.
+      Always consult your physician before starting any supplement program.
+    </p>
+    <p style="margin-top:8px;">
+      ClickBank is the authorized retailer of this product.
+      CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation.
+      ClickBank's role as retailer does not constitute an endorsement or review of the product.
+    </p>
+  </div>
+
+  <script>
+    // Scroll-triggered pulse on CTA buttons
+    document.querySelectorAll('.btn-cta').forEach(btn => {
+      btn.addEventListener('mouseenter', () => btn.classList.add('pulse'));
+      btn.addEventListener('mouseleave', () => btn.classList.remove('pulse'));
+    });
+
+    // Track outbound clicks (Google Analytics / GTM ready)
+    document.querySelectorAll('a[href*="clickbank"]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'outbound_click', { event_category: 'CTA', event_label: 'YuSleep_HopLink' });
+        }
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
