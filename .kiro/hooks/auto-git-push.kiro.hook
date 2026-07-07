@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Auto Git Commit & Push",
+  "description": "Automatically stages, commits, and pushes any modified files to git after each agent session completes",
+  "version": "1",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "cd /d c:\\Users\\bgsmi\\OneDrive\\Documents\\yusleep && git add -A && git diff --cached --quiet || git commit -m \"Auto-commit: agent session changes\" && git push"
+  }
+}

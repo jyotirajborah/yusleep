@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "Bing IndexNow Auto-Ping",
+  "description": "Pings Bing IndexNow automatically whenever index.html or sitemap.xml is saved, so content changes are picked up by Bing immediately",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "index.html",
+      "sitemap.xml"
+    ]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "Invoke-WebRequest -Uri \"https://www.bing.com/indexnow?url=https://us-yusleep-en.com/&key=6843b303c31e4ed9b9f16006558c2af8\" -UseBasicParsing | Out-Null; Invoke-WebRequest -Uri \"https://www.bing.com/indexnow?url=https://us-yusleep-en.com/sitemap.xml&key=6843b303c31e4ed9b9f16006558c2af8\" -UseBasicParsing | Out-Null; Write-Output \"Bing IndexNow pinged successfully\""
+  }
+}
