@@ -12,6 +12,6 @@
   },
   "then": {
     "type": "runCommand",
-    "command": "Invoke-WebRequest -Uri \"https://www.bing.com/indexnow?url=https://us-yusleep-en.com/&key=6843b303c31e4ed9b9f16006558c2af8\" -UseBasicParsing | Out-Null; Invoke-WebRequest -Uri \"https://www.bing.com/indexnow?url=https://us-yusleep-en.com/sitemap.xml&key=6843b303c31e4ed9b9f16006558c2af8\" -UseBasicParsing | Out-Null; Write-Output \"Bing IndexNow pinged successfully\""
+    "command": "powershell -Command \"Invoke-WebRequest -Uri 'https://www.bing.com/indexnow?url=https://us-yusleep-en.com/&key=6843b303c31e4ed9b9f16006558c2af8' -UseBasicParsing | Out-Null; Invoke-WebRequest -Uri 'https://www.bing.com/indexnow?url=https://us-yusleep-en.com/sitemap.xml&key=6843b303c31e4ed9b9f16006558c2af8' -UseBasicParsing | Out-Null; Write-Output 'Bing IndexNow pinged successfully'\""
   }
 }
