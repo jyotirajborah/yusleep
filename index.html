@@ -195,7 +195,7 @@
 
     .proof-badge span { font-size: 16px; }
 
-    /* ── Testimonial Cards ── */
+    /* ── Section Labels ── */
     .section-label {
       text-align: center;
       font-size: 13px;
@@ -214,46 +214,113 @@
       margin-bottom: 28px;
     }
 
-    .testimonials {
+    /* ── Science Cards ── */
+    .science-grid {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
       margin-bottom: 40px;
     }
 
-    .tcard {
+    .sci-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 24px 22px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
     }
 
-    .tcard .stars {
-      color: var(--gold);
-      font-size: 16px;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+    .sci-card .sci-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      line-height: 1;
     }
 
-    .tcard .quote {
-      font-size: 15px;
-      color: #c8d8e8;
-      line-height: 1.65;
-      margin-bottom: 14px;
-      font-style: italic;
-    }
-
-    .tcard .author {
-      font-size: 13px;
+    .sci-card .sci-label {
+      font-size: 11px;
       font-weight: 700;
       color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
     }
 
-    .tcard .verified {
-      font-size: 11px;
-      color: var(--green);
-      font-weight: 600;
+    .sci-card h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
     }
+
+    .sci-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Stats Row ── */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+
+    .stat-box {
+      flex: 1;
+      min-width: 140px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stat-box .num {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-box .desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Why Others Fail ── */
+    .compare {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 40px;
+    }
+
+    .compare h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .compare-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      align-items: flex-start;
+    }
+
+    .compare-row .bad  { color: #e74c3c; font-weight: 700; flex-shrink: 0; }
+    .compare-row .good { color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .compare-row span  { color: #c8d8e8; }
 
     /* ── Feature Pills ── */
     .features {
@@ -608,56 +675,113 @@
       </div>
     </div>
 
-    <!-- TESTIMONIALS -->
-    <div class="section-label">Real People. Real Results.</div>
-    <div class="section-title">What Happens When Your Sleep Finally Gets Fixed</div>
-
-    <div class="testimonials">
-
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
-          "I'm 52 and obsessed with tracking my data — so I was skeptical. But my Oura ring doesn't lie.
-          Before Yu Sleep my deep sleep averaged 37 minutes. After two weeks I'm hitting over 1 hour consistently.
-          My readiness score went from mid-50s to high 80s, and my HRV literally doubled.
-          <strong>The data doesn't lie — this works.</strong>"
+    <!-- WHY OTHER SOLUTIONS FAIL -->
+    <div class="compare">
+      <h3>Why Everything Else Has Failed You</h3>
+      <div class="compare-row">
+        <span class="bad">✗</span>
+        <span><strong style="color:#fff;">High-dose melatonin (5–10mg)</strong> — floods receptors, creates dependency, and leaves you foggy in the morning</span>
+      </div>
+      <div class="compare-row">
+        <span class="bad">✗</span>
+        <span><strong style="color:#fff;">Prescription sleep aids</strong> — suppress deep sleep stages, cause rebound insomnia when you stop</span>
+      </div>
+      <div class="compare-row">
+        <span class="bad">✗</span>
+        <span><strong style="color:#fff;">Generic "sleep gummies"</strong> — single-ingredient, no synergy, zero effect on cortisol spikes or brain wave activity</span>
+      </div>
+      <div class="compare-row">
+        <span class="bad">✗</span>
+        <span><strong style="color:#fff;">Herbal teas & magnesium alone</strong> — mildly helpful but don't address adenosine depletion or racing thoughts at 3 AM</span>
+      </div>
+      <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
+        <div class="compare-row">
+          <span class="good">✓</span>
+          <span><strong style="color:#fff;">Yu Sleep</strong> — 10 synergistic compounds targeting every stage of the sleep cycle simultaneously, in nano-enhanced form for faster absorption</span>
         </div>
-        <div class="author">Jenna N. — Boston, MA</div>
-        <div class="verified">✔ Verified Purchase</div>
+      </div>
+    </div>
+
+    <!-- SCIENCE / INGREDIENT PROOF -->
+    <div class="section-label">The Science Inside</div>
+    <div class="section-title">10 Clinically-Referenced Ingredients<br>Working in Synergy</div>
+
+    <div class="science-grid">
+
+      <div class="sci-card">
+        <div class="sci-icon">🍒</div>
+        <div>
+          <div class="sci-label">Ingredient #1</div>
+          <h3>Red Tart Cherry Extract</h3>
+          <p>One of nature's richest natural sources of melatonin precursors. Clinical studies show it reduces nighttime wake-ups and extends total sleep time — without next-day grogginess.</p>
+        </div>
       </div>
 
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
-          "I'm 56 and thought waking up at 3 AM was just 'getting older.' After a few days,
-          I actually sleep through the night and feel rested like I did in my 20s.
-          My energy is back, I'm down 2 dress sizes, and my kids said <strong>'Mom, you're fun again!'</strong>"
+      <div class="sci-card">
+        <div class="sci-icon">🌿</div>
+        <div>
+          <div class="sci-label">Ingredient #2</div>
+          <h3>Lemon Balm Extract</h3>
+          <p>Directly reduces cortisol — the stress hormone responsible for those brutal 3 AM wake-ups. Studied specifically for calming the nervous system and reducing nighttime anxiety.</p>
         </div>
-        <div class="author">Mary D. — Tampa, FL</div>
-        <div class="verified">✔ Verified Purchase</div>
       </div>
 
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
-          "My husband and I had been sleeping in separate beds for two years because of my tossing and turning.
-          The first night I took Yu Sleep, I fell asleep in minutes. Two weeks later we're back in the same bed.
-          <strong>He said 'I got my wife back.' I cried happy tears.</strong>"
+      <div class="sci-card">
+        <div class="sci-icon">🧬</div>
+        <div>
+          <div class="sci-label">Ingredient #3</div>
+          <h3>GABA</h3>
+          <p>Your brain's primary "off switch." Oral GABA supplementation has been shown in clinical trials to reduce sleep latency and improve non-REM sleep quality by quieting overactive neural circuits.</p>
         </div>
-        <div class="author">Lisa M. — Chicago, IL</div>
-        <div class="verified">✔ Verified Purchase</div>
       </div>
 
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
-          "No more caffeine overload. No more afternoon crashes. I start every morning clear,
-          focused, and ready. <strong>Yu Sleep did what nothing else could.</strong>"
+      <div class="sci-card">
+        <div class="sci-icon">🍵</div>
+        <div>
+          <div class="sci-label">Ingredient #4</div>
+          <h3>L-Theanine</h3>
+          <p>Promotes alpha brain waves — the same state you're in during meditation. Proven to reduce anxiety and racing thoughts without sedation, so you drift off naturally rather than crashing.</p>
         </div>
-        <div class="author">Rachel M. — Springfield, OH</div>
-        <div class="verified">✔ Verified Purchase</div>
       </div>
 
+      <div class="sci-card">
+        <div class="sci-icon">💊</div>
+        <div>
+          <div class="sci-label">Ingredient #5</div>
+          <h3>Only 0.9mg Melatonin</h3>
+          <p>Research shows low-dose melatonin (under 1mg) is just as effective as high-dose — with none of the receptor desensitization. This is the dose that signals your body to sleep, not overwhelm it.</p>
+        </div>
+      </div>
+
+      <div class="sci-card">
+        <div class="sci-icon">🔋</div>
+        <div>
+          <div class="sci-label">Ingredients #6–10</div>
+          <h3>5-HTP, Magnesium Glycinate, Apigenin, B6 & B2</h3>
+          <p>5-HTP boosts serotonin for mood and relaxation. Magnesium Glycinate deepens restorative sleep stages. Apigenin is called "nature's gentle sedative." B6 and B2 regulate your circadian rhythm and support natural melatonin production.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="num">20</div>
+        <div class="desc">Clinical studies referenced in the formula</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">10</div>
+        <div class="desc">Synergistic ingredients per serving</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">&lt;5%</div>
+        <div class="desc">Average refund rate — one of the lowest on ClickBank</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">60</div>
+        <div class="desc">Day money-back guarantee, no questions asked</div>
+      </div>
     </div>
 
     <!-- URGENCY -->
@@ -726,11 +850,11 @@
   <!-- DISCLAIMER -->
   <div class="disclaimer">
     <p>
-      This page is an independent review &amp; affiliate promotion. The reviewer is compensated for referring sales.
-      Results shown are from verified purchasers and may not be typical. Individual results will vary.
+      This is an independent affiliate review page. The author is compensated for referring sales to the vendor.
+      This page is clearly identified as a review and the author has been compensated.
       These statements have not been evaluated by the Food and Drug Administration.
       This product is not intended to diagnose, treat, cure, or prevent any disease.
-      Always consult your physician before starting any supplement program.
+      Individual results will vary. Always consult your physician before starting any supplement program.
     </p>
     <p style="margin-top:8px;">
       ClickBank is the authorized retailer of this product.
